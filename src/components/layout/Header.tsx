@@ -7,18 +7,44 @@ import { cn } from "@/lib/utils";
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const activeSection = useActiveSection(portfolio.navigation.map((item) => item.id));
+  const activeSection = useActiveSection(
+    portfolio.navigation.map((item) => item.id),
+  );
+
+  const handleMobileNavClick = (id: string) => {
+    // Close the menu immediately
+    setOpen(false);
+
+    // Update the URL hash
+    window.location.hash = `#${id}`;
+
+    // Small timeout to ensure DOM is ready, then scroll
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/6 bg-base/70 backdrop-blur-xl">
       <div className="container mx-auto flex items-center justify-between gap-6 py-4">
-        <a href="#home" className="focus-ring flex items-center gap-3 rounded-full" onClick={() => setOpen(false)}>
+        <a
+          href="#home"
+          className="focus-ring flex items-center gap-3 rounded-full"
+          onClick={() => setOpen(false)}
+        >
           <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10 font-display text-lg text-accent shadow-glow">
             {portfolio.basics.initials}
           </span>
           <span className="hidden sm:block">
-            <span className="block text-sm font-semibold text-text">{portfolio.basics.name}</span>
-            <span className="block text-xs uppercase tracking-[0.22em] text-muted">BIT Undergraduate</span>
+            <span className="block text-sm font-semibold text-text">
+              {portfolio.basics.name}
+            </span>
+            <span className="block text-xs uppercase tracking-[0.22em] text-muted">
+              BIT Undergraduate
+            </span>
           </span>
         </a>
 
@@ -29,7 +55,9 @@ export function Header() {
               href={`#${item.id}`}
               className={cn(
                 "focus-ring rounded-full px-4 py-2 text-sm font-medium transition",
-                activeSection === item.id ? "bg-white/8 text-text" : "text-muted hover:bg-white/5 hover:text-text",
+                activeSection === item.id
+                  ? "bg-white/8 text-text"
+                  : "text-muted hover:bg-white/5 hover:text-text",
               )}
             >
               {item.label}
@@ -68,7 +96,10 @@ export function Header() {
                 <a
                   key={item.id}
                   href={`#${item.id}`}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleMobileNavClick(item.id);
+                  }}
                   className={cn(
                     "focus-ring rounded-[1.2rem] border px-4 py-3 text-sm font-medium transition",
                     activeSection === item.id
