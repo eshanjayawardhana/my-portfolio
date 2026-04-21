@@ -1,0 +1,162 @@
+@import "@fontsource-variable/sora";
+@import "@fontsource/fraunces";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --color-base: 7 11 20;
+  --color-surface: 14 20 36;
+  --color-panel: 17 24 42;
+  --color-line: 123 143 176;
+  --color-text: 243 247 255;
+  --color-muted: 169 181 201;
+  --color-accent: 121 212 255;
+  --color-warm: 255 203 127;
+  --color-success: 113 221 174;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-base font-sans text-text antialiased;
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at top left, rgba(121, 212, 255, 0.16), transparent 0 24%),
+    radial-gradient(circle at top right, rgba(255, 203, 127, 0.12), transparent 0 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(121, 212, 255, 0.25);
+  color: rgb(var(--color-text));
+}
+
+.surface {
+  @apply border border-line/15 bg-surface/70 shadow-soft backdrop-blur-xl;
+}
+
+.surface-strong {
+  @apply border border-white/10 bg-panel/75 shadow-glow backdrop-blur-2xl;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-accent;
+}
+
+.heading-display {
+  @apply font-display text-balance;
+}
+
+.copy-muted {
+  @apply text-sm leading-7 text-muted sm:text-base;
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 120px 120px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 85%);
+}
+
+.glow-ring {
+  position: absolute;
+  inset: auto;
+  border-radius: 999px;
+  filter: blur(48px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-base;
+}
+
+.rich-link {
+  @apply relative inline-flex items-center gap-2 text-sm font-semibold text-text transition hover:text-accent;
+}
+
+.rich-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(121, 212, 255, 0.9), rgba(255, 203, 127, 0.35));
+  transform-origin: left;
+  transform: scaleX(0.5);
+  opacity: 0.65;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.rich-link:hover::after,
+.rich-link:focus-visible::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.field {
+  @apply w-full rounded-[1.2rem] border border-white/10 bg-white/5 px-4 py-3 text-text placeholder:text-muted;
+}
+
+.section-anchor {
+  scroll-margin-top: 6.5rem;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: reveal 700ms ease forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
