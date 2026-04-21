@@ -62,23 +62,6 @@ export const portfolio = {
       "I am especially drawn to frontend work because it combines code, design decisions, and user experience in one place.",
       " I care about responsive layouts, clear interactions, and keeping the final interface polished without making it heavy.",
     ],
-    highlights: [
-      {
-        title: "Recruiter-first presentation",
-        description:
-          "Important information is surfaced quickly so skills, education, and project value are easy to scan.",
-      },
-      {
-        title: "Modular by design",
-        description:
-          "All content is driven from a single config file, making updates safer and faster.",
-      },
-      {
-        title: "Lightweight and deployable",
-        description:
-          "Static React build with Netlify-ready deployment and minimal runtime complexity.",
-      },
-    ],
   },
   skills: [
     {
@@ -142,7 +125,7 @@ export const portfolio = {
         {
           label: "GPA Calculator",
           url: "https://github.com/eshanjayawardhana/BIT-GPA-Cal-Web",
-        }
+        },
       ],
     },
   ] satisfies ProjectEntry[],
@@ -150,7 +133,7 @@ export const portfolio = {
     title:
       "Projects that reflect my interest in practical web applications and frontend problem-solving.",
     description:
-      "These projects highlight my work with React, Node.js, PostgreSQL, responsive UI, authentication, booking flows, and reliable calculation-based interfaces.",
+      "",
   },
   education: {
     degree: "Bachelor of Information Technology",
