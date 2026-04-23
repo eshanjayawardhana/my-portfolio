@@ -127,6 +127,9 @@ export const portfolio = {
           label: "GPA Calculator",
           url: "https://github.com/eshanjayawardhana/BIT-GPA-Cal-Web",
         },
+        { label: "Live", 
+        url: "https://bit-gpa-calculator.netlify.app/" 
+        },
       ],
     },
     {
