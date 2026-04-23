@@ -108,6 +108,9 @@ export const portfolio = {
           label: "Shutter Crew (Backend)",
           url: "https://github.com/eshanjayawardhana/ShutterCrew-server",
         },
+        { label: "Live", 
+        url: "https://shuttercrew.vercel.app/" 
+        },
       ],
     },
     {
