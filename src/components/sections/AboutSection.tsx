@@ -60,10 +60,11 @@ export function AboutSection() {
           </article>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-4">
           <InfoBlock icon={<Users className="h-5 w-5" />} title="Soft skills" items={portfolio.additional.softSkills} />
           <InfoBlock icon={<Languages className="h-5 w-5" />} title="Languages" items={portfolio.additional.languages} />
           <InfoBlock icon={<Sparkles className="h-5 w-5" />} title="Certifications" items={portfolio.additional.certifications} />
+          <InfoBlock icon={<Code2 className="h-5 w-5" />} title=" Skills" items={portfolio.additional.skills} />
         </div>
       </div>
     </section>

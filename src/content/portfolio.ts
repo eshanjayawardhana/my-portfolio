@@ -61,6 +61,7 @@ export const portfolio = {
       "My main interest is software engineering through web applications. I enjoy the process of turning a problem into a system that is understandable, maintainable, and useful to real users.",
       "I am especially drawn to frontend work because it combines code, design decisions, and user experience in one place.",
       " I care about responsive layouts, clear interactions, and keeping the final interface polished without making it heavy.",
+      "Outside of coding, I am a passionate photographer. This creative background gives me a unique perspective on visual hierarchy, color theory, and composition, which I directly apply to building polished and intuitive user interfaces.",
     ],
   },
   skills: [
@@ -128,12 +129,42 @@ export const portfolio = {
         },
       ],
     },
+    {
+      title: "Bright Class LMS ( In-progress )",
+      subtitle: "Enterprise-grade Learning Management System with Secure Auth",
+      tech: [
+        "Angular 17",
+        "Spring Boot",
+        "PostgreSQL",
+        "Spring Security",
+        "JWT",
+        "Tailwind CSS",
+      ],
+      features: [
+        "Role-Based Access Control (Admin, Lecturer, Student)",
+        "Secure JWT Authentication with Refresh Token Rotation",
+        "Course Enrollment and Automated Payment Verification",
+        "Dynamic Dashboards for Content and Student Management",
+        "Responsive and Interactive User Interface",
+      ],
+      focus:
+        "A full-stack professional solution designed to digitize academic workflows, ensuring high security and seamless course delivery for higher education.",
+      links: [
+        {
+          label: "LMS (Frontend)",
+          url: "https://github.com/eshanjayawardhana/Bright_Class_LMS_frontend",
+        },
+        {
+          label: "LMS (Backend)",
+          url: "https://github.com/eshanjayawardhana/Bright_Class_LMS_backend",
+        },
+      ],
+    },
   ] satisfies ProjectEntry[],
   projectSection: {
     title:
       "Projects that reflect my interest in practical web applications and frontend problem-solving.",
-    description:
-      "",
+    description: "",
   },
   education: {
     degree: "Bachelor of Information Technology",
@@ -161,6 +192,14 @@ export const portfolio = {
     certifications: [
       "Cyber Security & Networking",
       "Python for Beginners (University of Moratuwa)",
+      "CameraLK academy (basic certificate course)",
+      "SLTC Research University (wildlife photography)",
+    ],
+    skills: [
+      "Frontend Development",
+      "Backend & DB",
+      "Photography - Visual Composition|Adobe Photoshop|Image Editing",
+      "Engineering Tools - Git/GitHub|Postman|Docker (Basic)|IntelliJ IDEA",
     ],
   },
   contact: {
