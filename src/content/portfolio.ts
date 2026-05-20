@@ -166,6 +166,43 @@ export const portfolio = {
         },
       ],
     },
+    {
+      title: "Quizspark AI-Powered Quiz Platform",
+      subtitle: "AI-Powered Learning Platform with Virtual Currency System",
+      tech: [
+        "React",
+        "Node.js & Express",
+        "Supabase (PostgreSQL)",
+        "Clerk Auth",
+        "Google Gemini AI",
+        "Tailwind CSS",
+        "Cloudinary",
+        "EmailJS"
+      ],
+      features: [
+        "AI-driven automated bank slip verification using Google Gemini Vision",
+        "Virtual coin economy system for unlocking premium quizzes and AI Tutor",
+        "Comprehensive Admin Dashboard for content management and payment approvals",
+        "Secure user authentication (Clerk) with role-based access control (Admin/User)",
+        "Automated real-time email notifications for transaction updates and rewards",
+      ],
+      focus:
+        "A fully deployed, modern full-stack web application integrating AI capabilities and a virtual economy to deliver a highly engaging and interactive educational experience.",
+      links: [       
+        {
+          label: "Quizspark (Frontend)",
+          url: "https://github.com/eshanjayawardhana/quizspark-frontend",
+        },
+        {
+          label: "Quizspark (Backend)",
+          url: "https://github.com/eshanjayawardhana/quizspark-backend",
+        },
+        {
+          label: "Live",
+          url: "https://quizsparkedu.vercel.app/",
+        },
+      ],
+    },
   ] satisfies ProjectEntry[],
   projectSection: {
     title:
