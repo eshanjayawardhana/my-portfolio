@@ -1,10 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Eshan Jayawardana monogram">
-  <defs>
-    <linearGradient id="a" x1="0%" x2="100%" y1="0%" y2="100%">
-      <stop offset="0%" stop-color="#79d4ff"/>
-      <stop offset="100%" stop-color="#ffcb7f"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="18" fill="#09111f"/>
-  <path d="M18 18h28v6H25v8h17v6H25v8h21v6H18V18Zm25.5 0h6v34h-6z" fill="url(#a)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#090909"/>
+  <rect x="6" y="6" width="52" height="52" rx="12" fill="#2563EB"/>
+  <text x="32" y="42" font-family="Geist, Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="white" text-anchor="middle">EJ</text>
 </svg>
