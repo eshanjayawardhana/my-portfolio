@@ -27,7 +27,7 @@ export const portfolio = {
     location: "Yatiyantota, Sri Lanka",
     linkedin: "https://linkedin.com/in/eshan-jayawardhana/",
     github: "https://github.com/eshanjayawardhana",
-    cvUrl: "/my-cv.pdf",
+    cvUrl: "/eshan-jayawardana-cv.pdf",
   },
   navigation: [
     { id: "home", label: "Home" },

@@ -106,7 +106,7 @@ export function HeroSection() {
             <div className="overflow-hidden rounded-[1.8rem] border border-white/10 bg-base/65 p-3 backdrop-blur-xl">
               <div className="relative overflow-hidden rounded-[1.4rem] bg-gradient-to-br from-accent/15 via-white/5 to-warm/10">
                 <img
-                  src="/profile-placeholder1.jpg"
+                  src="/profile-placeholder1.png"
                   alt="Portrait placeholder for Eshan Jayawardana"
                   className="h-[460px] w-full rounded-[1.4rem] object-cover object-center sm:h-[540px]"
                   loading="eager"
